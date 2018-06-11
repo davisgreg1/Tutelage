@@ -8,11 +8,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-<<<<<<< HEAD:backend/package.json
-    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
-=======
     "heroku-postbuild":"cd client && npm install --only=dev && npm install && npm run build"
->>>>>>> b78a49fd33680b6d22084086f83d97559bd835b2:package.json
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

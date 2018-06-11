@@ -8,15 +8,19 @@ const session = require("express-session");
 const passport = require("passport");
 
 var users = require("./routes/users");
+var index = require("./routes/index");
 
 var app = express();
 
 // view engine setup
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
 app.use(logger("dev"));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(cookieParser());
 
 app.use(
@@ -31,17 +35,24 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
+app.use("/", index);
 app.use("/users", users);
 
+<<<<<<< HEAD:backend/app.js
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + "../frontend/build/index.html"));
 });
+=======
+app.get("*", (req, res) => {
+    res.sendFile(__dirname + "/client/build/index.html");
+  });
+>>>>>>> b78a49fd33680b6d22084086f83d97559bd835b2:app.js
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error("Not Found");
-    err.status = 404;
-    next(err);
+app.use((req, res, next) => {
+  var err = new Error("Not Found");
+  err.status = 404;
+  next(err);
 });
 
 // error handler

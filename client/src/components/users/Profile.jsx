@@ -162,19 +162,6 @@ class Profile extends Component {
     // let currentURL = this.props.match.url;
     profileUser = { ...profileUser, interests };
     
-<<<<<<< HEAD
-    let commonInterests = currentUser.interests
-      ? profileUser.interests.filter(interest =>
-          currentUser.interests.includes(interest)
-        )
-      : ["Loading"];
-    if (
-      currentUser.interests &&
-      profileUser.interests &&
-      commonInterests.length === 0
-    )
-      commonInterests = ["Nothing in common"];
-=======
     // let commonInterests = currentUser.interests
     //   ? profileUser.interests.filter(interest =>
     //       currentUser.interests.includes(interest)
@@ -186,7 +173,6 @@ class Profile extends Component {
     //   commonInterests.length === 0
     // )
     //   commonInterests = ["Nothing in common"];
->>>>>>> 3d6b566fe1c7716fd121efb0f0bad5ad6c3ab1df
     let isCurrentUserProfile = currentUser.id === profileUser.id;
 
     // console.log({ commonInterests });

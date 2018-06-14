@@ -176,14 +176,8 @@ class App extends Component {
     } = this;
 
     return (
-<<<<<<< HEAD
-      <div className="App">
-        <NavBar
-          user={user}
-=======
       <div className="App" style={appStyle}>
         <NavBar user={user}
->>>>>>> 314f015a85be6576d4cb2b706e999ffd97eb1ac4
           signedIn={signedIn}
           getUserInfo={getUserInfo}
           logOut={logOut}

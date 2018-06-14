@@ -54,7 +54,10 @@ class App extends Component {
           .then(res => {
             let interests = res.data.interests;
             user = { ...user, interests: interests };
+<<<<<<< HEAD
             console.log("axios user", user);
+=======
+>>>>>>> 19adb140800c7cc7518a12917d1db0a327b52e8a
             this.setState({
               signedIn: true,
               user: user
